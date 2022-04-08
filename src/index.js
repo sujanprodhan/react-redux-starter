@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter,Switch,Route,Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createGlobalStyle } from 'styled-components';
 
@@ -10,19 +10,21 @@ import Posts from './components/Posts';
 import reset from './constants/css/reset';
 import AddNewPost from './components/AddNewPost';
 
-import "./css/styles.css";
+import "./css/styles.scss";
 
 const GlobalStyle = createGlobalStyle`${reset}`;
 
 ReactDOM.render(
     <BrowserRouter>
-        <Fragment> 
+        <Fragment>
             <Provider store={store}>
                 {/* <App /> */}
-                <div className="menu">
-                <Link to="/posts" >Posts   </Link>
-                <Link to="/" >Home </Link> 
-                <Link to="/add-new-post" > Add New Post </Link> 
+                <div className='container-menu'>
+                    <div className="menu">
+                        <Link to="/posts" >Posts   </Link>
+                    <Link to="/" >Home </Link>
+                        <Link to="/add-new-post" > Add New Post </Link>
+                    </div>
                 </div>
                 <Switch>
                     <Route path="/" exact>
@@ -37,7 +39,7 @@ ReactDOM.render(
                 </Switch>
             </Provider>
             <GlobalStyle />
-           
+
         </Fragment>
 
     </BrowserRouter>,

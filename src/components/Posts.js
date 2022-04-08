@@ -13,7 +13,9 @@ class Posts extends Component {
   componentDidMount() {
     this.props.fetchPosts().then((data) => {   
       this.setState(({posts : data}))
+   //  this.setState(({posts: this.props.posts}));
     });
+
   }
 
   render() {
@@ -27,7 +29,7 @@ class Posts extends Component {
     ));
 
     return (
-      <div>
+      <div className='container'>
         <h1>Posts</h1>
          {postItems}
       </div>
@@ -42,7 +44,7 @@ Posts.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  posts: state.posts,
+  posts: state.posts.lists,
   newPost: state.posts.item
 });
 

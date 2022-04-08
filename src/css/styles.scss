@@ -1,6 +1,18 @@
 .container{
-    margin: 80px;
+    background: #f7f7f7;
+    margin: 30px;
+    border: 1px soli #ccc;
+    border-radius: 20px;
+    padding: 30px;
 }
-.menu{
-    margin: 80px;
+
+.container-menu{
+    background: #f0f0f0;
+    margin: 30px;
+    border: 1px soli #ccc;
+    border-radius: 20px;
+    padding: 30px;
+    .menu a{
+        padding: 0px 30px;
+    }
 }
